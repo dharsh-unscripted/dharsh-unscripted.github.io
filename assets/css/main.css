@@ -1928,13 +1928,18 @@ input, select, textarea {
 /* Header */
 
 	#header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
 		position: relative;
 	}
 
 /* Logo */
 
 	#logo {
-		display: inline-block;
+		display: block;
+		margin-bottom: 1.5em;
 	}
 
 		#logo h1 {
@@ -1943,41 +1948,44 @@ input, select, textarea {
 			border-radius: 6px;
 			font-family: 'Oleo Script', serif;
 			font-weight: 400;
-			padding: 0.25em 0.2em 0.25em 0.2em;
-			font-size: 3.25em;
+			padding: 0.25em 0.4em;
+			font-size: 3em;
 			letter-spacing: 0.05em;
 			display: inline-block;
 			vertical-align: middle;
 		}
 
 		#logo span {
-			display: block;      /* forces it onto a new line */
+			display: block;
 			font-weight: 800;
-			line-height: 1.5em;  /* tighter spacing */
+			line-height: 1.5em;
 			letter-spacing: 0.025em;
 			font-size: 0.9em;
-			margin: 0.5em 0 0 0; /* some space above */
-		  }
-		  
+			margin: 0.5em 0 0 0;
+		}
 
 /* Nav */
 
 	#nav {
-		position: absolute;
-		right: 0;
-		top: 0;
+		position: static;
+		width: 100%;
 		font-size: 0.9em;
 	}
 
 		#nav ul {
 			list-style: none;
 			padding-left: 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			gap: 0.5em;
 		}
 
 			#nav ul li {
-				float: left;
-				line-height: 4.5em;
-				padding-left: 1.5em;
+				float: none;
+				line-height: 2.5em;
+				padding-left: 0;
 			}
 
 				#nav ul li a, #nav ul li span {
@@ -1990,7 +1998,8 @@ input, select, textarea {
 					color: #696969;
 					text-decoration: none;
 					border-radius: 6px;
-					padding: 0.5em 1em 0.5em 1em;
+					padding: 0.4em 0.75em;
+					white-space: nowrap;
 				}
 
 				#nav ul li > ul {
